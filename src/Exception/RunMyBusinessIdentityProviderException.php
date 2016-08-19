@@ -2,15 +2,21 @@
 
 namespace RunMyBusiness\Platform\ApiClient;
 
+use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 use Psr\Http\Message\ResponseInterface;
 
+/**
+ * Class RunMyBusinessIdentityProviderException
+ *
+ * @package RunMyBusiness\Platform\ApiClient
+ */
 class RunMyBusinessIdentityProviderException extends IdentityProviderException
 {
     /**
      * Creates client exception from response.
      *
      * @param ResponseInterface $response
-     * @param string            $data     Parsed response data
+     * @param string            $data Parsed response data
      *
      * @return IdentityProviderException
      */
@@ -26,7 +32,7 @@ class RunMyBusinessIdentityProviderException extends IdentityProviderException
      * Creates oauth exception from response.
      *
      * @param ResponseInterface $response
-     * @param string            $data     Parsed response data
+     * @param string            $data Parsed response data
      *
      * @return IdentityProviderException
      */

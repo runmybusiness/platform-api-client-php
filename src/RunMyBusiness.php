@@ -2,10 +2,16 @@
 
 namespace RunMyBusiness\Platform\ApiClient;
 
+use League\OAuth2\Client\Provider\AbstractProvider;
+use League\OAuth2\Client\Token\AccessToken;
+use League\OAuth2\Client\Tool\BearerAuthorizationTrait;
 use Psr\Http\Message\ResponseInterface;
-use RunMyBusiness\Platform\ApiClient\Token\AccessToken;
-use RunMyBusiness\Platform\ApiClient\Tool\BearerAuthorizationTrait;
 
+/**
+ * Class RunMyBusiness
+ *
+ * @package RunMyBusiness\Platform\ApiClient
+ */
 class RunMyBusiness extends AbstractProvider
 {
     use BearerAuthorizationTrait;
@@ -24,7 +30,7 @@ class RunMyBusiness extends AbstractProvider
      */
     public function getBaseAuthorizationUrl()
     {
-        return $this->domain.'/oauth/authorize';
+        return $this->domain . '/oauth/authorize';
     }
 
     /**
@@ -36,7 +42,7 @@ class RunMyBusiness extends AbstractProvider
      */
     public function getBaseAccessTokenUrl(array $params)
     {
-        return $this->domain.'/oauth/access_token';
+        return $this->domain . '/oauth/access_token';
     }
 
     /**
@@ -48,7 +54,7 @@ class RunMyBusiness extends AbstractProvider
      */
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
-        return $this->domain.'/api/me';
+        return $this->domain . '/api/me';
     }
 
     /**
@@ -68,7 +74,7 @@ class RunMyBusiness extends AbstractProvider
      * Check a provider response for errors.
      *
      * @param ResponseInterface $response
-     * @param string            $data     Parsed response data
+     * @param string            $data Parsed response data
      *
      * @throws IdentityProviderException
      *

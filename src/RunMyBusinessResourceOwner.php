@@ -2,6 +2,13 @@
 
 namespace RunMyBusiness\Platform\ApiClient;
 
+use League\OAuth2\Client\Provider\ResourceOwnerInterface;
+
+/**
+ * Class RunMyBusinessResourceOwner
+ *
+ * @package RunMyBusiness\Platform\ApiClient
+ */
 class RunMyBusinessResourceOwner implements ResourceOwnerInterface
 {
     /**
