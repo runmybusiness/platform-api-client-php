@@ -1,0 +1,35 @@
+{
+    "name": "runmybusiness/platform-api-client",
+    "description": "API Client for the RunMyBusiness Platform",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "RunMyBusiness, LLC",
+            "email": "hello@runmy.business",
+            "homepage": "https://runmy.business"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "league/oauth2-client": "~1.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.5",
+        "mockery/mockery": "~0.9",
+    },
+    "autoload": {
+        "psr-4": {
+            "RunMyBusiness\\Platform\\ApiClient\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RunMyBusiness\\Platform\\ApiClient\\Tests\\": "test/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
