@@ -9,8 +9,8 @@ class RunMyBusinessIdentityProviderException extends IdentityProviderException
     /**
      * Creates client exception from response.
      *
-     * @param  ResponseInterface $response
-     * @param  string $data Parsed response data
+     * @param ResponseInterface $response
+     * @param string            $data     Parsed response data
      *
      * @return IdentityProviderException
      */
@@ -25,8 +25,8 @@ class RunMyBusinessIdentityProviderException extends IdentityProviderException
     /**
      * Creates oauth exception from response.
      *
-     * @param  ResponseInterface $response
-     * @param  string $data Parsed response data
+     * @param ResponseInterface $response
+     * @param string            $data     Parsed response data
      *
      * @return IdentityProviderException
      */
@@ -41,8 +41,8 @@ class RunMyBusinessIdentityProviderException extends IdentityProviderException
     /**
      * Creates identity exception from response.
      *
-     * @param  ResponseInterface $response
-     * @param  string $message
+     * @param ResponseInterface $response
+     * @param string            $message
      *
      * @return IdentityProviderException
      */
