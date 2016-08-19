@@ -5,9 +5,7 @@ namespace RunMyBusiness\Platform\ApiClient;
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 
 /**
- * Class RunMyBusinessResourceOwner
- *
- * @package RunMyBusiness\Platform\ApiClient
+ * Class RunMyBusinessResourceOwner.
  */
 class RunMyBusinessResourceOwner implements ResourceOwnerInterface
 {

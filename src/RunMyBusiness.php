@@ -8,9 +8,7 @@ use League\OAuth2\Client\Tool\BearerAuthorizationTrait;
 use Psr\Http\Message\ResponseInterface;
 
 /**
- * Class RunMyBusiness
- *
- * @package RunMyBusiness\Platform\ApiClient
+ * Class RunMyBusiness.
  */
 class RunMyBusiness extends AbstractProvider
 {
@@ -30,7 +28,7 @@ class RunMyBusiness extends AbstractProvider
      */
     public function getBaseAuthorizationUrl()
     {
-        return $this->domain . '/oauth/authorize';
+        return $this->domain.'/oauth/authorize';
     }
 
     /**
@@ -42,7 +40,7 @@ class RunMyBusiness extends AbstractProvider
      */
     public function getBaseAccessTokenUrl(array $params)
     {
-        return $this->domain . '/oauth/access_token';
+        return $this->domain.'/oauth/access_token';
     }
 
     /**
@@ -54,7 +52,7 @@ class RunMyBusiness extends AbstractProvider
      */
     public function getResourceOwnerDetailsUrl(AccessToken $token)
     {
-        return $this->domain . '/api/me';
+        return $this->domain.'/api/me';
     }
 
     /**
@@ -74,7 +72,7 @@ class RunMyBusiness extends AbstractProvider
      * Check a provider response for errors.
      *
      * @param ResponseInterface $response
-     * @param string            $data Parsed response data
+     * @param string            $data     Parsed response data
      *
      * @throws IdentityProviderException
      *
