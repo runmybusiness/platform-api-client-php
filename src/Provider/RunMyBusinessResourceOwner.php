@@ -5,14 +5,14 @@ namespace RunMyBusiness\Platform\ApiClient;
 class RunMyBusinessResourceOwner implements ResourceOwnerInterface
 {
     /**
-     * Domain
+     * Domain.
      *
      * @var string
      */
     protected $domain;
 
     /**
-     * Raw response
+     * Raw response.
      *
      * @var array
      */
@@ -21,15 +21,15 @@ class RunMyBusinessResourceOwner implements ResourceOwnerInterface
     /**
      * Creates new resource owner.
      *
-     * @param array  $response
+     * @param array $response
      */
-    public function __construct(array $response = array())
+    public function __construct(array $response = [])
     {
         $this->response = $response;
     }
 
     /**
-     * Get resource owner id
+     * Get resource owner id.
      *
      * @return string|null
      */
@@ -39,7 +39,7 @@ class RunMyBusinessResourceOwner implements ResourceOwnerInterface
     }
 
     /**
-     * Get resource owner email
+     * Get resource owner email.
      *
      * @return string|null
      */
@@ -49,7 +49,7 @@ class RunMyBusinessResourceOwner implements ResourceOwnerInterface
     }
 
     /**
-     * Get resource owner name
+     * Get resource owner name.
      *
      * @return string|null
      */
@@ -59,7 +59,7 @@ class RunMyBusinessResourceOwner implements ResourceOwnerInterface
     }
 
     /**
-     * Get resource owner nickname
+     * Get resource owner nickname.
      *
      * @return string|null
      */
@@ -69,7 +69,7 @@ class RunMyBusinessResourceOwner implements ResourceOwnerInterface
     }
 
     /**
-     * Get resource owner url
+     * Get resource owner url.
      *
      * @return string|null
      */
@@ -79,9 +79,9 @@ class RunMyBusinessResourceOwner implements ResourceOwnerInterface
     }
 
     /**
-     * Set resource owner domain
+     * Set resource owner domain.
      *
-     * @param  string $domain
+     * @param string $domain
      *
      * @return ResourceOwner
      */

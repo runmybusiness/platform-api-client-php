@@ -11,9 +11,9 @@ class RunMyBusinessTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $this->provider = new RunMyBusiness\Platform\ApiClient\RunMyBusiness([
-            'clientId' => 'mock_client_id',
+            'clientId'     => 'mock_client_id',
             'clientSecret' => 'mock_secret',
-            'redirectUri' => 'none',
+            'redirectUri'  => 'none',
         ]);
     }
 
@@ -36,10 +36,9 @@ class RunMyBusinessTest extends \PHPUnit_Framework_TestCase
         $this->assertNotNull($this->provider->getState());
     }
 
-
     public function testScopes()
     {
-        $options = ['scope' => [uniqid(),uniqid()]];
+        $options = ['scope' => [uniqid(), uniqid()]];
 
         $url = $this->provider->getAuthorizationUrl($options);
 

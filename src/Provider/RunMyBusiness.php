@@ -2,24 +2,23 @@
 
 namespace RunMyBusiness\Platform\ApiClient;
 
-use RunMyBusiness\Platform\ApiClient\RunMyBusinessIdentityProviderException;
+use Psr\Http\Message\ResponseInterface;
 use RunMyBusiness\Platform\ApiClient\Token\AccessToken;
 use RunMyBusiness\Platform\ApiClient\Tool\BearerAuthorizationTrait;
-use Psr\Http\Message\ResponseInterface;
 
 class RunMyBusiness extends AbstractProvider
 {
     use BearerAuthorizationTrait;
 
     /**
-     * Domain
+     * Domain.
      *
      * @var string
      */
     public $domain = '';
 
     /**
-     * Get authorization url to begin OAuth flow
+     * Get authorization url to begin OAuth flow.
      *
      * @return string
      */
@@ -29,9 +28,9 @@ class RunMyBusiness extends AbstractProvider
     }
 
     /**
-     * Get access token url to retrieve token
+     * Get access token url to retrieve token.
      *
-     * @param  array $params
+     * @param array $params
      *
      * @return string
      */
@@ -41,9 +40,9 @@ class RunMyBusiness extends AbstractProvider
     }
 
     /**
-     * Get provider url to fetch user details
+     * Get provider url to fetch user details.
      *
-     * @param  AccessToken $token
+     * @param AccessToken $token
      *
      * @return string
      */
@@ -68,9 +67,11 @@ class RunMyBusiness extends AbstractProvider
     /**
      * Check a provider response for errors.
      *
+     * @param ResponseInterface $response
+     * @param string            $data     Parsed response data
+     *
      * @throws IdentityProviderException
-     * @param  ResponseInterface $response
-     * @param  string $data Parsed response data
+     *
      * @return void
      */
     protected function checkResponse(ResponseInterface $response, $data)
@@ -85,8 +86,9 @@ class RunMyBusiness extends AbstractProvider
     /**
      * Generate a user object from a successful user details request.
      *
-     * @param array $response
+     * @param array       $response
      * @param AccessToken $token
+     *
      * @return League\OAuth2\Client\Provider\ResourceOwnerInterface
      */
     protected function createResourceOwner(array $response, AccessToken $token)
