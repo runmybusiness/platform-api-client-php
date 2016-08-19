@@ -7,9 +7,7 @@ use PHPUnit_Framework_TestCase;
 use RunMyBusiness\Platform\ApiClient\RunMyBusiness;
 
 /**
- * Class RunMyBusinessTest
- *
- * @package RunMyBusiness\Platform\ApiClient\Tests
+ * Class RunMyBusinessTest.
  */
 class RunMyBusinessTest extends PHPUnit_Framework_TestCase
 {
